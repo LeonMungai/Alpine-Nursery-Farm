@@ -9,7 +9,7 @@ type AboutProps = {
 
 export const About = ({ title, imageSrc, imageAlt, description }: AboutProps) => (
 
-    <main className="flex flex-col items-center text-center p-6 sm:p-10">
+    <main className="flex flex-col lg:flex-row items-center text-center p-6 sm:p-10">
 
         <h1 className="font-extralight text-teal-500 text-4xl sm:text-5xl m-6 underline">
             {title}
