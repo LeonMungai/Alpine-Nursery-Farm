@@ -11,10 +11,6 @@ export const About = ({ title, imageSrc, imageAlt, description }: AboutProps) =>
 
     <main className="flex flex-col lg:flex-row items-center text-center p-6 sm:p-10">
 
-        <h1 className="font-extralight text-teal-500 text-4xl sm:text-5xl m-6 underline">
-            {title}
-        </h1>
-
         <motion.img
             src={imageSrc}
             alt={imageAlt}
@@ -23,9 +19,17 @@ export const About = ({ title, imageSrc, imageAlt, description }: AboutProps) =>
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
         />
-        <p className="text-lg sm:text-xl font-light text-teal-500 mt-6 sm:mt-10 leading-relaxed max-w-3xl">
-            {description}
-        </p>
+
+        <div className="flex flex-col">
+            <h1 className="font-extralight text-teal-500 text-4xl sm:text-5xl underline">
+                {title}
+            </h1>
+
+            <p className="text-lg sm:text-xl font-light text-teal-500 mt-6 sm:mt-10 leading-relaxed max-w-3xl">
+                {description}
+            </p>
+        </div>
+
     </main>
 );
 
